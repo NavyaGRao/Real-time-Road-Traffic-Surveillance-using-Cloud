@@ -163,8 +163,8 @@ def run():
     f.write(str(final_word))
     f.close()
     s3=boto3.client('s3')
-    bucketlog = 'vidconvert'
-    bucketvideoavi = 'cf-templates-ckxl87y565ea-us-east-1'
+    bucketlog = 'Your-Log-Bucket-Name'
+    bucketvideoavi = 'Your-Video-Bucket-Name'
     s3.upload_file('./data/logs/'+b+'.log',bucketlog,'logs/'+b+'.log')
     s3.upload_file('my_file', 'test-mary2','my-file.txt')
 
