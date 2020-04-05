@@ -10,7 +10,7 @@ Ivy is an open source video-based vehicle counting system which employs several 
 - Clone this repo `git@github.com:nicholaskajoh/ivy.git`.
 - Create and/or use a virtual environment (optional but recommended).
 - Install the dependencies in _requirements.txt_ `pip install -r requirements.txt`.
-- Choose a detector and install its dependencies where necessary (if you're not sure what to pick, we recommend you start with `yolo`).
+- Install detector YOLO's dependencies where necessary 
 
 | Detector | Description | Dependencies |
 |---|---|---|
