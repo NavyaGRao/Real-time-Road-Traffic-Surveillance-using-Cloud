@@ -1,6 +1,0 @@
-data/*
-!data/.gitkeep
-.vscode/
-*.pyc
-.env
-.coverage
