@@ -39,7 +39,7 @@ def init_logger():
 
     logger = logging.getLogger(job_id)
     logger.addFilter(MetaFilter())
-    logger.setLevel(logging.DEBUG)
+    logger.setLevel(logging.INFO)
 
     enable_console_logger = settings.ENABLE_CONSOLE_LOGGER
     if enable_console_logger:
