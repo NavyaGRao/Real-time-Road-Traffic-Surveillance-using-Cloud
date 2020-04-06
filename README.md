@@ -9,10 +9,17 @@ Ivy is an open source video-based vehicle counting system which employs several 
 
 ## Requirements
 - Python 3
+- AWS account
+
+## AWS Services
+- EC2
+- Lambda
+- Media Convert
+- S3
+- Cloudfront
 
 ## Setup
-- Clone this repo `git@github.com:nicholaskajoh/ivy.git`.
-- Create and/or use a virtual environment (optional but recommended).
+- Clone this repo 
 - Install the dependencies in _requirements.txt_ `pip install -r requirements.txt`.
 - Install detector YOLO's dependencies where necessary 
 
