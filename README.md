@@ -11,7 +11,7 @@ Ivy is an open source video-based vehicle counting system which employs several 
 - Python 3
 - AWS account
 
-## AWS Services
+## AWS Services to be setup:
 - EC2
 - Lambda
 - Media Convert
