@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+</head>
+<body>
+<script type="text/javascript">
+        function function1(){
+        document.getElementById("iframe-id").src =  'https://d2qm75am6eul37.cloudfront.net/output_low.mp4';
+        document.getElementById("name").textContent='Low';
+    }
+        function function2(){
+        document.getElementById("iframe-id").src =  'https://d2qm75am6eul37.cloudfront.net/output_medium.mp4';
+        document.getElementById("name").textContent='Medium';
+    }
+        function function3(){
+        document.getElementById("iframe-id").src =  'https://out-put-test.s3.amazonaws.com/output_high.mp4';
+        document.getElementById("name").textContent='High';
+    }
+    // https://d2qm75am6eul37.cloudfront.net/output_high.mp4
+
+</script>
+<iframe id = "iframe-id" src="https://d2qm75am6eul37.cloudfront.net/output_medium.mp4" width=100% height="1000" allow="autoplay"></iframe>
+
+<div class="badge badge-primary text-wrap" style="width: 6rem; float: right;">
+<p id = "name" style="float: right;">Medium</p></div>
+
+
+
+<div class="dropdown" >
+  <button style="float: right;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Quality
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" onClick = 'function1()'>Low</a>
+    <a class="dropdown-item" onClick = 'function2()'>Medium</a>
+    <a class="dropdown-item" onClick = 'function3()'>High</a>
+  </div>
+</br>
+  <a href="https://test-mary2.s3.ca-central-1.amazonaws.com/my-file.txt">Download: Cumulated Count</a>
+
+  
+<!-- Footer -->
+<footer class="page-footer font-small mdb-color lighten-3 pt-4">
+<h2 style="text-align: center;">Project Partners:</h2>
+  <!-- Footer Elements -->
+  <div class="container">
+
+    <!--Grid row-->
+    <div class="row" >
+
+      <!--Grid column-->
+      <div class="col-lg-2 col-md-12 mb-4">
+
+        <!--Image-->
+        <div class="view overlay z-depth-1-half" >
+          <img src="cst.jpg" class="img-fluid"
+            alt="">
+          <a href="">
+            <div class="mask rgba-white-light"></div>
+          </a>
+        </div>
+
+      </div>
+      <!--Grid column-->
+
+      
+
+      <!--Grid column-->
+      <div class="col-lg-2 col-md-6 mb-4">
+
+        <!--Image-->
+        <div class="view overlay z-depth-1-half">
+          <img src="mm.png" class="img-fluid"
+            alt="">
+          <a href="">
+            <div class="mask rgba-white-light"></div>
+          </a>
+        </div>
+
+      </div>
+      <!--Grid column-->
+
+    </div>
+    <!--Grid row-->
+
+  </div>
+  <!-- Footer Elements -->
+
+
+</footer>
+<!-- Footer -->
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+
+<script>
+window.setInterval("reloadIFrame();", 100000);
+
+function reloadIFrame() {
+
+location.reload();
+ //  if($('p').text()=='Low') {
+ //  	function1();
+ //  }
+ //  else if($('p').text()=='Medium'){
+	// function2();
+ //  }else if($('p').text()=='High'){
+	// function3();
+ //  }
+}
+</script>
+</html>
