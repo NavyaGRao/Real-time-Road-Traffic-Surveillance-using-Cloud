@@ -21,7 +21,8 @@ Ivy is an open source video-based vehicle counting system which employs several 
 ## Setup
 - Clone this repo 
 - Install the dependencies in _requirements.txt_ `pip install -r requirements.txt`.
-- Install detector YOLO's dependencies where necessary [ivy_demo_data.zip](https://drive.google.com/open?    id=1JtEhWlfk1CiUEFsrTQHQa0VkTi3IKbze) and unzip its contents in the [data directory](/data). It contains Yolo model's weight.
+- Install detector YOLO's weight [weights](https://drive.google.com/file/d/1iuVPWkXXolngdxpc1p3YvJZMwbBi0dC4/view?usp=sharing)
+ and place the content file in the [data/detectors/yolo directory](/data/detectors/yolo). It contains Yolo model's weight.
 
 | Detector | Description | Dependencies |
 |---|---|---|
