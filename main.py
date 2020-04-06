@@ -165,8 +165,9 @@ def run():
     s3=boto3.client('s3')
     bucketlog = 'Your-Log-Bucket-Name'
     bucketvideoavi = 'Your-Video-Bucket-Name'
+    bucketcount= 'Your-bucket-name'
     s3.upload_file('./data/logs/'+b+'.log',bucketlog,'logs/'+b+'.log')
-    s3.upload_file('my_file', 'test-mary2','my-file.txt')
+    s3.upload_file('my_file', bucketcount,'my-file.txt')
 
     data1 = open('data/videos/output.avi', 'rb')
     s32=boto3.resource('s3')
