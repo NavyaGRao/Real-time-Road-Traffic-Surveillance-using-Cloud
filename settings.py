@@ -115,32 +115,7 @@ else:
     print('Invalid value for COUNTING_LINES. It should be a list of lines.')
     ENVS_READY = False
 
-# Configs for Haar Cascade detector
-if DETECTOR == 'haarcascade':
-    if os.getenv('HAAR_CASCADE_PATH'):
-        HAAR_CASCADE_PATH = os.getenv('HAAR_CASCADE_PATH')
-    else:
-        print('HAAR_CASCADE_PATH not set.')
-        ENVS_READY = False
 
-# Configs for TFODA (Tensorflow Object Detection API) detector
-if DETECTOR == 'tfoda' or DETECTOR == 'tfoda_new':
-    if os.getenv('TFODA_WEIGHTS_PATH') and \
-            os.getenv('TFODA_CONFIG_PATH') and \
-            os.getenv('TFODA_MODEL_DIR') and \
-            os.getenv('TFODA_CLASSES_PATH') and \
-            os.getenv('TFODA_CLASSES_OF_INTEREST_PATH') and \
-            os.getenv('TFODA_CONFIDENCE_THRESHOLD'):
-        TFODA_WEIGHTS_PATH = os.getenv('TFODA_WEIGHTS_PATH')
-        TFODA_CONFIG_PATH = os.getenv('TFODA_CONFIG_PATH')
-        TFODA_MODEL_DIR = os.getenv('TFODA_MODEL_DIR')
-        TFODA_CLASSES_PATH = os.getenv('TFODA_CLASSES_PATH')
-        TFODA_CLASSES_OF_INTEREST_PATH = os.getenv('TFODA_CLASSES_OF_INTEREST_PATH')
-        TFODA_CONFIDENCE_THRESHOLD = float(os.getenv('TFODA_CONFIDENCE_THRESHOLD'))
-    else:
-        print('TFODA_WEIGHTS_PATH, TFODA_CONFIG_PATH, TFODA_MODEL_DIR, TFODA_CLASSES_PATH, ' +
-              'TFODA_CLASSES_OF_INTEREST_PATH and/or TFODA_CONFIDENCE_THRESHOLD not set or invalid.')
-        ENVS_READY = False
 
 # Configs for YOLO (You Only Look Once) detector
 if DETECTOR == 'yolo':
@@ -157,25 +132,6 @@ if DETECTOR == 'yolo':
     else:
         print('YOLO_WEIGHTS_PATH, YOLO_CONFIG_PATH, YOLO_CLASSES_PATH, YOLO_CLASSES_OF_INTEREST_PATH, ' +
               'and/or YOLO_CONFIDENCE_THRESHOLD not set or invalid.')
-        ENVS_READY = False
-
-# Configs for Detectron2 detector
-if DETECTOR == 'detectron2':
-    if os.getenv('DETECTRON2_CONFIDENCE_THRESHOLD') and \
-            os.getenv('DETECTRON2_CONFIG_PATH') and \
-            os.getenv('DETECTRON2_WEIGHTS_PATH') and \
-            os.getenv('DETECTRON2_NUM_CLASSES') and \
-            os.getenv('DETECTRON2_CLASSES_PATH') and \
-            os.getenv('DETECTRON2_CLASSES_OF_INTEREST_PATH'):
-        DETECTRON2_CONFIDENCE_THRESHOLD = float(os.getenv('DETECTRON2_CONFIDENCE_THRESHOLD'))
-        DETECTRON2_CONFIG_PATH = os.getenv('DETECTRON2_CONFIG_PATH')
-        DETECTRON2_WEIGHTS_PATH = os.getenv('DETECTRON2_WEIGHTS_PATH')
-        DETECTRON2_NUM_CLASSES = int(os.getenv('DETECTRON2_NUM_CLASSES'))
-        DETECTRON2_CLASSES_PATH = os.getenv('DETECTRON2_CLASSES_PATH')
-        DETECTRON2_CLASSES_OF_INTEREST_PATH = os.getenv('DETECTRON2_CLASSES_OF_INTEREST_PATH')
-    else:
-        print('DETECTRON2_CONFIDENCE_THRESHOLD, DETECTRON2_CONFIG_PATH, DETECTRON2_WEIGHTS_PATH, DETECTRON2_NUM_CLASSES, ' +
-              'DETECTRON2_CLASSES_PATH and/or DETECTRON2_CLASSES_OF_INTEREST_PATH not set or invalid.')
         ENVS_READY = False
 
 # Log destinations
