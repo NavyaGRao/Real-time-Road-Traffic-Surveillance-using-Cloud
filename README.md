@@ -28,9 +28,20 @@ Ivy is an open source video-based vehicle counting system which employs several 
 | `yolo` | Perform detection using models created with the YOLO (You Only Look Once) neural net. https://pjreddie.com/darknet/yolo/ | |
 
 
-## Run
+## Run(only for ivy)
 - Create a _.env_ file (based on _.env.example_) in the project's root directory and edit as appropriate.
 - Run `python -m  main`.
+
+## Run(Cloud vehicle counting)
+- Create instances mentioned above. 
+- Replace bucket names with your bucket name.
+- Change the path of the local video file.
+- Start the server by running `python Run.py`.
+- Start the consumer on the cloud by running `python consumer.py`.
+- Start the producer on the local by running `python producer.py`.
+- Run the codes in Lamda to setup the file conversion and log writting.
+- Setup the web application by running the HTML on the web browser.
+- Refresh the webapp to see the output.
 
 ## Demo
 Download [ivy_demo_data.zip](https://drive.google.com/open?id=1JtEhWlfk1CiUEFsrTQHQa0VkTi3IKbze) and unzip its contents in the [data directory](/data). It contains detection models and a sample video of a traffic scene.
